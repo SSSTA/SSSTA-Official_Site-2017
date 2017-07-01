@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link href="./img/icon.png" rel="icon ">
+  <title>报名</title>
+  <!-- Bootstrap -->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="./css/main.min.css" rel="stylesheet">
+</head>
+<body onload="get_my_profile()">
+
+<header>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="./index.html">SS::STA</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="./test.html">小测试</a></li>
+          <li><a href="./groups_introduce.html">分组介绍</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="./join_us.html">加入我们</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="jumbotron">
+  <div class="container">
+    <h1>加入我们！</h1>
+    <p>放心吧，学长们不会偷窥你们的个人资料的</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="active" id="sign_up-li"><a onclick="turn_to('sign_up')">注册</a></li>
+      <li role="presentation" id="sign_in-li"><a onclick="turn_to('sign_in')">登录</a></li>
+      <li class="disabled" role="presentation" id="profile-li"><a id="profile-a">我的资料</a></li>
+    </ul>
+    <div id="sign_up-div">
+      <form action="" method="post">
+        <div>
+          <label>姓名</label>
+          <input name="name" type="text" class="form-control" placeholder="Name" id="name-input1" oninput="submit_check('form1')">
+        </div>
+        <div>
+          <label>通知书号</label>
+          <input name="number" type="text" class="form-control" placeholder="Account" id="number-input1" oninput="submit_check('form1')">
+        </div>
+        <div>
+          <label>密码</label>
+          <input name="password" type="password" class="form-control" placeholder="Password" id="pass-input1" oninput="submit_check('form1')" onblur="pass_again('onblur')">
+        </div>
+        <div class="form-group" id="pass_again-div1">
+          <label class="control-label">确认密码</label>
+          <input type="password" class="form-control" placeholder="Password" id="pass_again-input1" onfocus="pass_again('onfocus')" oninput="pass_again('onchange');submit_check('form1')" onblur="pass_again('onblur')">
+          <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" id="pass_again-span1"></span>
+        </div>
+        <button type="submit" class="btn btn-lg disabled" value="submit" id="submit1">注册</button>
+      </form>
+    </div>
+
+    <div id="sign_in-div" class="hidden">
+      <form onsubmit="sign_in()">
+        <div>
+          <label>通知书号<small class="hidden" style="color: red;" id="num_unsigned">（该账号未被注册，请注册后重试！）</small></label>
+          <input name="number" type="text" class="form-control" placeholder="Account" id="number-input2" oninput="submit_check('form2')">
+        </div>
+        <div>
+          <label>密码<small class="hidden" style="color: red;" id="pass_wrong">（密码错误，请核对后重试！）</small></label>
+          <input name="password" type="password" class="form-control" placeholder="Password" id="pass-input2" oninput="submit_check('form2')">
+        </div>
+        <button type="submit" class="btn btn-lg disabled" value="submit" id="submit2">登录</button>
+      </form>
+    </div>
+
+    <div id="profile-div" class="hidden">
+      <div>
+        <h2>身份信息</h2>
+        <h3 id="name_and_number">Undefined<small>undefined</small></h3>
+      </div>
+      <form action="" method="post">
+        <h2>联系方式</h2>
+        <div>
+          <label>邮箱</label>
+          <input name="email" type="email" class="form-control" placeholder="Email" id="email-input3">
+        </div>
+        <div>
+          <label>手机</label>
+          <input name="phone" type="text" class="form-control" placeholder="Phone" id="phone-input3">
+        </div>
+        <div>
+          <label>QQ</label>
+          <input name="qq" type="text" class="form-control" placeholder="QQ" id="qq-input3">
+        </div>
+        <div>
+          <label>Wechat</label>
+          <input name="wechat" type="text" class="form-control" placeholder="Wechat" id="wechat-input3">
+        </div>
+        <h2>自我介绍</h2>
+        <div>
+          <label>你的梦想是</label>
+          <select name="direction" title="Direction" class="form-control" id="direction-input3">
+            <option value="undefined" selected>不确定...</option>
+            <option value="web">Web</option>
+            <option value="android">Android</option>
+            <option value="ios">iOS</option>
+            <option value="game">Game</option>
+            <option value="acm">ACM</option>
+            <option value="design">设计部</option>
+          </select>
+        </div>
+        <div>
+          <label>介绍一下你自己</label>
+          <textarea name="description" title="介绍一下你自己" class="form-control" rows="4" style="resize: none;" id="description-input3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-lg disabled" value="submit" id="submit3">提交</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script src="./js/ajax.min.js" rel="script"></script>
+<script src="./js/join_us.min.js" rel="script"></script>
+<script src="./js/jquery.min.js" rel="script"></script>
+<script src="./js/bootstrap.min.js" rel="script"></script>
+</body>
+</html>

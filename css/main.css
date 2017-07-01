@@ -1,0 +1,25 @@
+/*|-----------|*/
+/*| 元素一般性 |*/
+/*|-----------|*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.btn-h3{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+pre{
+    font-size: 16px;
+}
+
+/* ------------------------- */
+nav.navbar-default {
+    margin-bottom: 0;
+}
+
