@@ -1,3 +1,9 @@
+// Some useful url.
+var get_my_profile_url = '//localhost/my_profile';
+var sign_up_url = '//localhost/sign_up';
+var sign_in_url = '//localhost/sign_in';
+var post_my_profile_url = '//localhost/post_my_profile';
+
 function createXHR(){
     var res;
     if (window.XMLHttpRequest) {  // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -38,7 +44,7 @@ function get_my_profile()
             }
         }
     };
-    res.open("GET", "../my_profile", true);
+    res.open("GET", get_my_profile_url, true);
     res.send();
 }
 
@@ -79,8 +85,8 @@ function sign_in()
         }
     };
     var number = document.getElementById('number-input2').value;
-    var password = document.getElementById('pass-input2').value;
-    res.open("post", "../sign_in", true);
+    var password = md5(document.getElementById('pass-input2').value);
+    res.open("post", sign_in_url, true);
     res.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     res.send("number="+number+"&password="+password);
 }

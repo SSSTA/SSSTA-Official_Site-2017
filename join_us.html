@@ -10,10 +10,10 @@
 
   <link href="./css/main.min.css" rel="stylesheet">
 </head>
-<body onload="get_my_profile()">
 
+<body onload="get_my_profile()">
 <header>
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-inverse">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -21,7 +21,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="./index.html">SS::STA</a>
+        <a class="navbar-brand" href="./index.html"><img src="./img/nav-icon.png" height="32" width="100"></a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
@@ -51,7 +51,7 @@
       <li class="disabled" role="presentation" id="profile-li"><a id="profile-a">我的资料</a></li>
     </ul>
     <div id="sign_up-div">
-      <form action="" method="post">
+      <form>
         <div>
           <label>姓名</label>
           <input name="name" type="text" class="form-control" placeholder="Name" id="name-input1" oninput="submit_check('form1')">
@@ -133,6 +133,34 @@
   </div>
 </section>
 
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 col-sm-8">
+        <ul class="list-inline">
+          <li><a title="项目源代码" href="https://github.com/Keyboard-l/SSSTA-Official-Site">GitHub</a></li>
+          <li><a title="Big brother is watching you." href="./beholder.html">神秘入口</a></li>
+          <li><a title="与dalao谈笑风生" href="./contact.html">联系我们</a></li>
+          <li><a title="关于该网站" href="./about.html">关于</a></li>
+        </ul>
+        <br>
+        <p>
+          该网站由软院科协
+          <a href="#"><em>叁拾柒</em></a>
+          和
+          <a href="https://keyboard-l.github.io/myBlog/"><em>Keyboard</em></a>
+          设计。
+        </p>
+        <p>国家211重点高校西安电子科技大学国家示范性<a href="./index.html"><em>软件学院科学与技术协会</em></a>全体成员祝您走上人生巅峰。</p>
+      </div>
+      <div class="col-lg-3 col-xs-4">
+        <img class="img-responsive" src="./img/footer_icon.png">
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="./js/md5.min.js" rel="script"></script>
 <script src="./js/ajax.min.js" rel="script"></script>
 <script src="./js/join_us.min.js" rel="script"></script>
 <script src="./js/jquery.min.js" rel="script"></script>
