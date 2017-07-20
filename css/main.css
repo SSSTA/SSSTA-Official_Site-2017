@@ -65,6 +65,31 @@ section.jumbotron p.title{
         font-size: 20px;
     }
 }
+a.btn-lg.index{
+    padding: 15px 30px;
+    border-color: #2B3137;
+}
+a.btn-lg.index:link, a.btn-lg.index:visited{
+    background-color: transparent;
+    color: #2B3137;
+}
+a.btn-lg.index:hover, a.btn-lg.index:active{
+    background-color: #2B3137;
+    color: #FFFFFF;
+}
+/* -----------------------------------------------jumbotron */
+
+
+
+/* section----------------------------------------------- */
+section{
+    margin: 0;
+    padding: 80px 0;
+}
+div.paragraph{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
 section.jumbotron a.btn-lg{
     padding: 15px 30px;
     border-color: #ffffff;
@@ -76,15 +101,6 @@ section.jumbotron a.btn-lg:link, section.jumbotron a.btn-lg:visited{
 section.jumbotron a.btn-lg:hover, section.jumbotron a.btn-lg:active{
     background-color: #ffffff;
     color: #2B3137;
-}
-/* -----------------------------------------------jumbotron */
-
-
-
-/* section----------------------------------------------- */
-section{
-    margin: 0;
-    padding: 80px 0;
 }
 /* -----------------------------------------------section */
 
