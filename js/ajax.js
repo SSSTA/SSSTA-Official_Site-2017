@@ -1,8 +1,8 @@
 // Some useful url.
-var get_my_profile_url = '//172.28.165.30:8080/get_my_profile';
-var sign_up_url = '//172.28.165.30:8080/sign_up';
-var sign_in_url = '//172.28.165.30:8080/sign_in';
-var post_my_profile_url = '//172.28.165.30:8080/post_my_profile';
+var get_my_profile_url = '//172.28.165.4:8080/get_my_profile';
+var sign_up_url = '//172.28.165.4:8080/sign_up';
+var sign_in_url = '//172.28.165.4:8080/sign_in';
+var post_my_profile_url = '//172.28.165.4:8080/post_my_profile';
 
 function createXHR(){
     var res;
@@ -104,17 +104,10 @@ function sign_up()
     res.onreadystatechange = function(){
         if (res.readyState == 4) {
             if(res.status == 200) {
-                get_my_profile();
-                document.getElementById('pass_wrong').classList.add('hidden');
-                document.getElementById('num_unsigned').classList.add('hidden');
-                get_my_profile();
+                window.location.href="./sign_up_success.html?name="+name;
             }
             else if(res.status == 402){  // 账号已注册
-                document.getElementById('pass_wrong').classList.add('hidden');
-                document.getElementById('num_unsigned').classList.remove('hidden');
-                document.getElementById('profile-li').classList.add('disabled');
-                document.getElementById('profile-a').removeAttribute('onclick');
-                turn_to('sign_in');
+
             }
         }
     };
