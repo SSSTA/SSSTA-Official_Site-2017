@@ -40,8 +40,6 @@ section.jumbotron{
     background-color: #2B3137;
     color: #ffffff;
 }
-
-
 section.jumbotron h1.title{
     font-size: 63px;
 }
@@ -67,8 +65,6 @@ section.jumbotron p.title{
         font-size: 20px;
     }
 }
-
-
 section.jumbotron a.btn-lg{
     padding: 15px 30px;
     border-color: #ffffff;
@@ -112,6 +108,12 @@ footer a:hover, footer a:active{
 
 
 
+/* form----------------------------------------------- */
+div.form-div{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+/* -----------------------------------------------form */
 
 
 pre{

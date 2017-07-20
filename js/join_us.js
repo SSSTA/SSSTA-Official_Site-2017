@@ -75,27 +75,44 @@ function submit_check(formID)
 {
     if(formID=='form1'){
         var name1 = document.getElementById('name-input1').value;
-        var number1 = document.getElementById('number-input1').value;
+        var account1 = document.getElementById('account-input1').value;
         var pass1 = document.getElementById('pass-input1').value;
         var pass_again1 = document.getElementById('pass_again-input1').value;
-        if(name1 != '' && number1 != '' && pass1 != '' && pass1 == pass_again1){  // 启用提交按钮
+        var email1 = document.getElementById('email-input1').value;
+        if(name1 != '' && email1 != '' && account1 != '' && pass1 != '' && pass1 == pass_again1){  // 启用提交按钮
             document.getElementById('submit1').classList.remove('disabled');
+            document.getElementById('submit1').setAttribute('onclick', "sign_up()");
         }
         else{  // 禁用提交按钮
             document.getElementById('submit1').classList.add('disabled');
+            document.getElementById('submit1').removeAttribute('onclick');
         }
     }
     else if(formID=='form2'){
-        var number2 = document.getElementById('number-input2').value;
+        var account2 = document.getElementById('account-input2').value;
         var pass2 = document.getElementById('pass-input2').value;
-        if(number2 != '' && pass2 != ''){  // 启用提交按钮
+        if(account2 != '' && pass2 != ''){  // 启用提交按钮
             document.getElementById('submit2').classList.remove('disabled');
+            document.getElementById('submit2').setAttribute('onclick', "sign_in()");
         }
         else{  // 禁用提交按钮
             document.getElementById('submit2').classList.add('disabled');
+            document.getElementById('submit2').removeAttribute('onclick');
         }
     }
     else if(formID=='form3'){
 
     }
+}
+
+function switch_group()
+{
+    var group = document.getElementById('direction-input3').value;
+    var web_option = document.getElementById('web-option');
+    var game_option = document.getElementById('game-option');
+    var acm_option = document.getElementById('acm-option');
+    web_option.classList.add('hidden');
+    game_option.classList.add('hidden');
+    acm_option.classList.add('hidden');
+    document.getElementById(group+'-option').classList.remove('hidden');
 }
