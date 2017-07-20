@@ -82,12 +82,22 @@ section.jumbotron a.btn-lg:hover, section.jumbotron a.btn-lg:active{
 
 
 /* section----------------------------------------------- */
+section.paragraph h2{
+    font-size: 50px;
+}
+@media(max-width: 992px){
+    section.paragraph h2{
+        font-size: 40px;
+    }
+}
+@media(max-width: 768px){
+    section.paragraph h2{
+        font-size: 30px;
+    }
+}
 section{
     margin: 0;
     padding: 80px 0;
-}
-section.paragraph h2{
-    font-size: 50px;
 }
 div.paragraph{
     margin-top: 30px;

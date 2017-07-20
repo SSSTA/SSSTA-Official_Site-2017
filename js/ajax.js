@@ -1,8 +1,9 @@
 // Some useful url.
-var get_my_profile_url = '//172.28.165.4:8080/get_my_profile';
-var sign_up_url = '//172.28.165.4:8080/sign_up';
-var sign_in_url = '//172.28.165.4:8080/sign_in';
-var post_my_profile_url = '//172.28.165.4:8080/post_my_profile';
+var get_my_profile_url = '//192.168.43.164:8080/get_my_profile';
+var sign_up_url = '//192.168.43.164:8080/sign_up';
+var sign_in_url = '//192.168.43.164:8080/sign_in';
+var post_my_profile_url = '//192.168.43.164:8080/post_my_profile';
+
 
 function createXHR(){
     var res;
@@ -106,7 +107,7 @@ function sign_up()
             if(res.status == 200) {
                 window.location.href="./sign_up_success.html?name="+name;
             }
-            else if(res.status == 402){  // 账号已注册
+            else if(res.status == 401){  // 账号已注册
 
             }
         }
