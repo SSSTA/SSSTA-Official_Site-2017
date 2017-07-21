@@ -13,7 +13,7 @@
 
 <body onload="get_my_profile()">
 <header>
-  <nav class="navbar navbar-inverse">
+  <nav class="navbar navbar-inverse title">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -21,7 +21,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="./index.html"><img src="./img/nav-icon.png" height="32" width="100"></a>
+        <a class="navbar-brand title" href="./index.html"><img src="./img/nav-icon.png" height="32" width="100"></a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
@@ -48,7 +48,7 @@
     <ul class="nav nav-tabs">
       <li role="presentation" class="active" id="sign_up-li"><a onclick="turn_to('sign_up')">注册</a></li>
       <li role="presentation" id="sign_in-li"><a onclick="turn_to('sign_in')">登录</a></li>
-      <li class="disabled" role="presentation" id="profile-li"><a id="profile-a">我的资料</a></li>
+      <li class="disabled" role="presentation" id="profile-li"><a id="profile-a">我的信息</a></li>
     </ul>
     <div id="sign_up-div"><!-- 注册部分 -->
       <form>
@@ -56,6 +56,14 @@
         <div class="form-div">
           <label>姓名</label>
           <input name="name" type="text" class="form-control" placeholder="Name" id="name-input1" oninput="submit_check('form1')">
+        </div>
+        <div class="form-div">
+          <label>性别</label>
+          <select name="sex" title="Sex" class="form-control" id="sex-input1" oninput="submit_check('form1')">
+            <option value="undefined" selected disabled>请选择...</option>
+            <option value="female">女生</option>
+            <option value="male">男生</option>
+          </select>
         </div>
         <div class="form-div">
           <label>Email</label>
@@ -66,7 +74,7 @@
 
         <!-- 账号密码 -->
         <div class="form-div">
-          <label>学号/通知书号</label>
+          <label>学号/通知书号<small class="hidden" style="color: red;" id="had_signed">（账号已注册，请直接登录！）</small></label>
           <input name="account" type="text" class="form-control" placeholder="Account" id="account-input1" oninput="submit_check('form1')">
         </div>
         <div class="form-div">

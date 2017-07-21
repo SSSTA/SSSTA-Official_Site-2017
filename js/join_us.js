@@ -75,11 +75,13 @@ function submit_check(formID)
 {
     if(formID=='form1'){
         var name1 = document.getElementById('name-input1').value;
+        var sex1 = document.getElementById('sex-input1').value;
         var account1 = document.getElementById('account-input1').value;
         var pass1 = document.getElementById('pass-input1').value;
         var pass_again1 = document.getElementById('pass_again-input1').value;
         var email1 = document.getElementById('email-input1').value;
-        if(name1 != '' && email1 != '' && account1 != '' && pass1 != '' && pass1 == pass_again1){  // 启用提交按钮
+        document.getElementById('had_signed').classList.add('hidden');
+        if(name1 != '' && sex1 != 'undefined' && email1 != '' && account1 != '' && pass1 != '' && pass1 == pass_again1){  // 启用提交按钮
             document.getElementById('submit1').classList.remove('disabled');
             document.getElementById('submit1').setAttribute('onclick', "sign_up()");
         }

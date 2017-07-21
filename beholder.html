@@ -9,11 +9,12 @@
   <link href="./css/bootstrap.min.css" rel="stylesheet">
 
   <link href="./css/main.min.css" rel="stylesheet">
+  <link href="./css/beholder.min.css" rel="stylesheet">
 </head>
 
-<body style="background-color: black;">
+<body onload="get_something()">
 <header>
-  <nav class="navbar navbar-inverse">
+  <nav class="navbar navbar-inverse title">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -21,7 +22,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="./index.html"><img src="./img/nav-icon.png" height="32" width="100"></a>
+        <a class="navbar-brand title" href="./index.html"><img src="./img/nav-icon.png" height="32" width="100"></a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
@@ -46,14 +47,14 @@
       <div class="col-md-4 col-sm-6">
         <form>
           <div class="form-group">
-            <label>Account</label>
-            <input type="email" class="form-control" placeholder="Account">
+            <label>Account<small class="hidden" style="color: red;" id="num_unsigned">（该账号未被注册，请注册后重试！）</small></label>
+            <input type="email" class="form-control" placeholder="Account" id="account">
           </div>
-          <label>Password</label>
+          <label>Password<small class="hidden" style="color: red;" id="pass_wrong">（密码错误，请核对后重试！）</small></label>
           <div class="input-group">
-            <input type="password" class="form-control" placeholder="Password">
+            <input type="password" class="form-control" placeholder="Password" id="pass">
             <span class="input-group-btn">
-              <button class="btn btn-default" type="button">Login</button>
+              <button class="btn btn-default" type="button" onclick="sign_in()">Login</button>
             </span>
           </div>
         </form>
@@ -62,13 +63,45 @@
   </div>
 </section>
 
-<section>
+<section id="nothing">
   <div class="container">
-    <h1 class="text-center">敬请期待</h1>
+    <h1 class="text-center">请登录</h1>
   </div>
 </section>
 
-<section></section>
+<section class="hidden" id="everything">
+  <div class="main">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse">
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="button" class="btn btn-default" onclick="search()">Submit</button>
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <table class="table table-responsive table-condensed" id="table">
+      <tr>
+        <td>姓名</td>
+        <td>性别</td>
+        <td>邮箱</td>
+        <td>手机</td>
+        <td>wechat</td>
+        <td>qq</td>
+        <td>梦想</td>
+        <td class="col-sm-2">自我介绍</td>
+        <td>web组选题1</td>
+        <td class="col-sm-2">web组选题2</td>
+        <td class="col-sm-2">acm组选题</td>
+        <td class="col-sm-2">game组选题</td>
+      </tr>
+    </table>
+  </div>
+</section>
 
 <footer>
   <div class="container">
@@ -97,6 +130,7 @@
   </div>
 </footer>
 
+<script src="./js/beholder.min.js" rel="script"></script>
 <script src="./js/jquery.min.js" rel="script"></script>
 <script src="./js/bootstrap.min.js" rel="script"></script>
 </body>
