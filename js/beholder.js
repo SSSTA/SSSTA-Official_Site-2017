@@ -1,4 +1,4 @@
-var beholder_url = '//192.168.43.164:8080/beholder';
+var beholder_url = '//172.28.165.4:8080/beholder';
 
 
 function createXHR(){
@@ -21,11 +21,10 @@ function get_something()
                 // 录入信息
                 var data = JSON.parse(res.responseText);
                 var table = document.getElementById('table');
-                for(var i = 0;i < length(data);i++){
+                for(var i = 0;i < data.length;i++){
                     var tr = document.createElement('tr');
                     var td = document.createElement('td');
-                    alert(data[i].name);
-                    td.innerHTML = data[i].name;
+                    td.innerHTML(document.createTextNode(data[i].name));
                     tr.appendChild(td);
                     td.innerHTML = data[i].sex;
                     tr.appendChild(td);

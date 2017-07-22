@@ -122,7 +122,7 @@ function sign_up()
                 window.location.href="./sign_up_success.html?name="+name;
             }
             else if(res.status == 403){  // 账号已注册
-                document.getElementById('hed_signed').classList.remove('hidden');
+                document.getElementById('had_signed').classList.remove('hidden');
                 document.getElementById('profile-li').classList.add('disabled');
                 document.getElementById('profile-a').removeAttribute('onclick');
                 turn_to('sign_up');

@@ -9,9 +9,21 @@
   <link href="./css/bootstrap.min.css" rel="stylesheet">
 
   <link href="./css/main.min.css" rel="stylesheet">
+  <style>  /* 各组定制特效 */
+  .acm_zh{  font-family: 华文行楷;  }
+  .acm_en{  font-family: Brush Script Std;  }
+  body{  background-image: url('./img/5-120601094355.png');background-repeat: repeat-y;background-position: center;  }
+  @media(min-width: 768px){
+    section.web{  background-image: url(./img/web_bg.png);background-repeat: no-repeat;background-position: center;  }
+    section.ios{  background-image: url(./img/ios_bg.png);background-repeat: no-repeat;background-position: center;  }
+    section.android{  background-image: url(./img/android_bg.png);background-repeat: no-repeat;background-position: center;  }
+    section.game{  background-image: url(./img/game_bg.png);background-repeat: no-repeat;background-position: center;  }
+    section.acm{  background-image: url(./img/acm_bg.png);background-repeat: no-repeat;background-position: center;  }
+  }
+  </style>
 </head>
 
-<body style="background-image: url('./img/5-120601094355.png');background-repeat: repeat-y;background-position: center;">
+<body>
 <header>
   <nav class="navbar navbar-inverse title">
     <div class="container">
@@ -42,7 +54,7 @@
     <p>这是拉动科协走向人生巅峰的六架马车</p>
   </div>
 </section>
-<section class="paragraph" style="background-image: url(./img/web_bg.png);background-repeat: no-repeat;background-position: center;">
+<section class="paragraph web">
   <div class="container text-center">
     <div class="row">
       <div class="col-lg-2 col-lg-offset-5 col-xs-12">
@@ -75,7 +87,7 @@
   </div>
 </section>
 <hr>
-<section class="paragraph" style="background-image: url(./img/ios_bg.png);background-repeat: no-repeat;background-position: center;">
+<section class="paragraph ios">
   <div class="container text-center">
     <div class="row">
       <div class="col-lg-2 col-lg-offset-5 col-xs-12">
@@ -97,7 +109,7 @@
   </div>
 </section>
 <hr>
-<section class="paragraph" style="background-image: url(./img/android_bg.png);background-repeat: no-repeat;background-position: center;">
+<section class="paragraph android">
   <div class="container text-center">
     <div class="row">
       <div class="col-lg-2 col-lg-offset-5 col-xs-12">
@@ -114,7 +126,7 @@
   </div>
 </section>
 <hr>
-<section class="paragraph" style="background-image: url(./img/game_bg.png);background-repeat: no-repeat;background-position: center;">
+<section class="paragraph game">
   <div class="container text-center">
     <div class="row">
       <div class="col-lg-2 col-lg-offset-5 col-xs-12">
@@ -151,7 +163,7 @@
   </div>
 </section>
 <hr>
-<section class="paragraph">
+<section class="paragraph acm">
   <div class="container text-center">
     <div class="row">
       <div class="col-lg-2 col-lg-offset-5 col-xs-12">
@@ -164,11 +176,22 @@
     <div class="acm_zh">
       <p class="lead">西电最激动人心的电子竞技项目是什么？王者荣耀？<span class="acm_en">DOTA</span>?<span class="acm_en">LOL</span>?</p>
       <p class="lead">都不是，是<span class="acm_en">ACM</span>!!</p>
-      <p class="lead">而且这个游戏，不但不要你氪金买皮肤，反而福利多多:公款吃喝旅游，均分加分奖学金收入囊中...</p>
-      <p class="lead">也许一开始你只是个<span title="ruò ruò">蒻鶸</span>，什么都不会。那有什么关系。在日日夜夜的奋斗之后，你能做出一些题目了！接着就是光荣之路：校赛，省赛，暑假集训，亚洲区域赛...和世界上最优秀的大脑同台竞技，并且，打败他们。</p>
+      <p class="lead">而且这个游戏，不但不要你氪金买皮肤，反而福利多多:</p>
+      <p class="lead">公款吃喝旅游，均分加分奖学金收入囊中...</p>
+      <br>
+      <p class="lead">也许一开始你只是个<span title="ruò ruò">蒻鶸</span>，什么都不会。</p>
+      <p class="lead">那有什么关系。</p>
+      <br>
+      <p class="lead">在日日夜夜的奋斗之后，你能做出一些题目了！</p>
+      <p class="lead">接着就是光荣之路：校赛，省赛，暑假集训，亚洲区域赛...和世界上最优秀的大脑同台竞技，</p>
+      <p class="lead">并且，打败他们。</p>
       <p class="lead">想要证明自己的话，还有什么比这个更好的机会！！！</p>
-      <p class="lead">也许你与清北复交浙失之交臂？也许你渴望进入<span class="acm_en">BAT,Google,MSC</span>?也许你渴望在<span class="acm_en">Stanford</span>或<span class="acm_en">UCB</span>的实验室里，喝着咖啡，看着窗外凌晨4点的加州？</p>
-      <p class="lead">如果你是公司的面试官，或是国内外名校的导师，几乎相同的两份简历，唯一的不同是其中一份多了一项<span class="acm_en">ACM</span>亚洲区域赛的银牌，你觉得哪份简历更有吸引力？</p>
+      <br>
+      <p class="lead">也许你与清北复交浙失之交臂？</p>
+      <p class="lead">也许你渴望进入<span class="acm_en">BAT,Google,MSC</span>?</p>
+      <p class="lead">也许你渴望在<span class="acm_en">Stanford</span>或<span class="acm_en">UCB</span>的实验室里，喝着咖啡，看着窗外凌晨4点的加州？</p>
+      <p class="lead">如果你是公司的面试官，或是国内外名校的导师，几乎相同的两份简历，唯一的不同是其中一份多了一项<span class="acm_en">ACM</span>亚洲区域赛的银牌，</p>
+      <p class="lead">你觉得哪份简历更有吸引力？</p>
       <p class="lead">来吧，加入我们，来发掘<span class="acm_en">ACM</span>竞赛的无穷乐趣吧！</p>
     </div>
   </div>
@@ -183,7 +206,7 @@
         </div>
       </div>
     </div>
-    <h2 class="page-header">设计部</h2>
+    <h2 class="page-header design">设计部</h2>
     <p class="lead">你对设计的概念是什么？你是否认为程序员们都要以技术为重？</p>
     <p class="lead">你对设计的概念是什么？你是否认为程序员们都要以技术为重？</p>
     <p class="lead">不管你是否擅长代码，只要对软件设计有兴趣，都可以来我们这儿试试。在这你能学到UI设计的基本操作。</p>
