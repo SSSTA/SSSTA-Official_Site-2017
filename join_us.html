@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <link href="./img/icon.png" rel="icon ">
+  <link href="//sssta-official-site.oss-cn-shenzhen.aliyuncs.com/img/icon.png" rel="icon ">
   <title>报名</title>
   <!-- Bootstrap -->
-  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link href="//sssta-official-site.oss-cn-shenzhen.aliyuncs.com/css/bootstrap.min.css" rel="stylesheet">
 
-  <link href="./css/main.min.css" rel="stylesheet">
+  <link href="//sssta-official-site.oss-cn-shenzhen.aliyuncs.com/css/main.min.css" rel="stylesheet">
 </head>
 
 <body onload="get_my_profile()">
 <header>
-  <nav class="navbar navbar-inverse title">
+  <nav class="navbar navbar-inverse title join">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -21,7 +21,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand title" href="./index.html"><img src="./img/nav-icon.png" height="32" width="100"></a>
+        <a class="navbar-brand title" href="./index.html"><img src="//sssta-official-site.oss-cn-shenzhen.aliyuncs.com/img/nav-icon.png" height="32" width="100"></a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
@@ -36,7 +36,7 @@
   </nav>
 </header>
 
-<section class="jumbotron">
+<section class="jumbotron join">
   <div class="container">
     <h1>加入我们！</h1>
     <p>放心吧，学长们不会偷窥你们的个人资料的</p>
@@ -66,12 +66,10 @@
           </select>
         </div>
         <div class="form-div">
-          <label>Email</label>
+          <label>Email<small class="hidden" style="color: red;" id="had_signed_email">（该邮箱已使用，请更换或直接前往登录！）</small></label>
           <input name="email" type="text" class="form-control" placeholder="Email" id="email-input1" oninput="submit_check('form1')">
         </div>
-
         <hr>
-
         <!-- 账号密码 -->
         <div class="form-div">
           <label>学号/通知书号<small class="hidden" style="color: red;" id="had_signed">（账号已注册，请直接登录！）</small></label>
@@ -147,9 +145,7 @@
           <label>介绍一下你自己</label>
           <textarea name="description" class="form-control" rows="4" style="resize: none;" placeholder="随便写吧，学长们未能就问什么具体的问题达成一致，所以你有机会在这瞎编" id="description-input3"></textarea>
         </div>
-
         <hr>
-
         <!-- 分组选题 -->
         <div id="web-option">
           <h4 class="text-right">web组选题</h4>
@@ -199,14 +195,14 @@
       <div class="col-lg-9 col-sm-8">
         <ul class="list-inline">
           <li><a title="项目前端源代码" href="https://github.com/Keyboard-l/SSSTA-Official-Site">GitHub</a></li>
-          <li><a title="Big brother is watching you." href="./beholder.html">神秘入口</a></li>
-          <li><a title="与dalao谈笑风生" href="./contact.html">联系我们</a></li>
+          <li><a title="It's a big surprise for you!" href="//sssta-official-site.oss-cn-shenzhen.aliyuncs.com/surprise.html">神秘入口</a></li>
+          <li><a title="与dalao谈笑风生" href="//sssta-official-site.oss-cn-shenzhen.aliyuncs.com/contact.html">联系我们</a></li>
           <li><a title="关于该网站" href="https://github.com/Keyboard-l/SSSTA-Official-Site/blob/master/README.md">关于</a></li>
         </ul>
         <br>
         <p>
           该网站由软院科协
-          <a href="#"><em>叁拾柒</em></a>
+          <a href="http://www.three7.cc/"><em>叁拾柒</em></a>
           和
           <a href="https://keyboard-l.github.io/myBlog/"><em>Keyboard</em></a>
           设计。
@@ -214,16 +210,16 @@
         <p>国家211重点高校西安电子科技大学国家示范性<a href="./index.html"><em>软件学院科学与技术协会</em></a>全体成员祝您走上人生巅峰。</p>
       </div>
       <div class="col-lg-3 col-xs-4">
-        <img class="img-responsive" src="./img/footer_icon.png">
+        <img class="img-responsive" src="//sssta-official-site.oss-cn-shenzhen.aliyuncs.com/img/footer_icon.png">
       </div>
     </div>
   </div>
 </footer>
 
-<script src="./js/md5.min.js" rel="script"></script>
-<script src="./js/ajax.min.js" rel="script"></script>
-<script src="./js/join_us.min.js" rel="script"></script>
-<script src="./js/jquery.min.js" rel="script"></script>
-<script src="./js/bootstrap.min.js" rel="script"></script>
+<script src="//sssta-official-site.oss-cn-shenzhen.aliyuncs.com/js/md5.min.js" rel="script"></script>
+<script src="//sssta-official-site.oss-cn-shenzhen.aliyuncs.com/js/ajax.min.js" rel="script"></script>
+<script src="//sssta-official-site.oss-cn-shenzhen.aliyuncs.com/js/join_us.min.js" rel="script"></script>
+<script src="//sssta-official-site.oss-cn-shenzhen.aliyuncs.com/js/jquery.min.js" rel="script"></script>
+<script src="//sssta-official-site.oss-cn-shenzhen.aliyuncs.com/js/bootstrap.min.js" rel="script"></script>
 </body>
 </html>
