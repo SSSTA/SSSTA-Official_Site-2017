@@ -32,13 +32,13 @@ function pass_again(command)
     var pass = document.getElementById('pass-input1').value;
     var pass_again = document.getElementById('pass_again-input1').value;
     if(pass==''){
-        document.getElementById('pass_again-div1').className = 'form-group has-error has-feedback';
-        document.getElementById('pass_again-span1').className = 'glyphicon glyphicon-remove form-control-feedback';
+        document.getElementById('pass_again-div1').className = 'form-group';
+        document.getElementById('pass_again-span1').className = '';
     }
     else if(command=='onfocus'){
         if(pass!=pass_again){  // 默认的
             document.getElementById('pass_again-div1').className = 'form-group';
-            document.getElementById('pass_again-span1').className = 'glyphicon glyphicon-ok form-control-feedback';
+            document.getElementById('pass_again-span1').className = '';
         }
         else{  // 对的
             document.getElementById('pass_again-div1').className = 'form-group has-success has-feedback';
@@ -48,7 +48,7 @@ function pass_again(command)
     else if(command=='onchange'){
         if(pass!=pass_again){  // 默认的
             document.getElementById('pass_again-div1').className = 'form-group';
-            document.getElementById('pass_again-span1').className = 'glyphicon glyphicon-ok form-control-feedback';
+            document.getElementById('pass_again-span1').className = '';
         }
         else{  // 对的
             document.getElementById('pass_again-div1').className = 'form-group has-success has-feedback';
@@ -58,7 +58,7 @@ function pass_again(command)
     else if(command=='onblur'){
         if(pass_again==''){  // 默认的
             document.getElementById('pass_again-div1').className = 'form-group';
-            document.getElementById('pass_again-span1').className = 'glyphicon glyphicon-ok form-control-feedback';
+            document.getElementById('pass_again-span1').className = '';
         }
         else if(pass!=pass_again){  // 错的
             document.getElementById('pass_again-div1').className = 'form-group has-error has-feedback';
