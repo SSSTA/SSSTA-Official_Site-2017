@@ -1,4 +1,4 @@
-var web = 0, ios = 0, game = 0, acm = 0, android = 0;
+var web = 0, ios = 0, game = 0, acm = 0, android = 0, ha = 0;
 
 function add_one(options, id)
 {
@@ -19,7 +19,24 @@ function add_one(options, id)
                 else if(option[0]=='android')
                     android += option[1];
             });
+            if(!options[0])
+                ha += 1;
             point_update();
+            if(ha >= 5){
+                alert('233，这不是彩蛋！不过恭喜你，解锁隐藏成就“最佳魔法师”。');
+                ha = 0;
+                document.getElementById('ha-1.1').classList.remove('btn-primary');
+                document.getElementById('ha-1.1').classList.add('btn-default');
+                document.getElementById('ha-1.2').classList.remove('btn-primary');
+                document.getElementById('ha-1.2').classList.add('btn-default');
+                document.getElementById('ha-1.3').classList.remove('btn-primary');
+                document.getElementById('ha-1.3').classList.add('btn-default');
+                document.getElementById('ha-1.4').classList.remove('btn-primary');
+                document.getElementById('ha-1.4').classList.add('btn-default');
+                document.getElementById('ha-1.5').classList.remove('btn-primary');
+                document.getElementById('ha-1.5').classList.add('btn-default');
+            }
+
         }
         else{  // 取消选择
             element.classList.remove('btn-primary');
@@ -36,6 +53,8 @@ function add_one(options, id)
                 else if(option[0]=='android')
                     android -= option[1];
             });
+            if(!options[0])
+                ha -= 1;
             point_update();
         }
     }
@@ -98,7 +117,7 @@ function point_update()
             ]
         },
         series: [{
-            name: '预算 vs 开销（Budget vs spending）',
+            name: '兴趣分布',
             type: 'radar',
             // areaStyle: {normal: {}},
             data : [
